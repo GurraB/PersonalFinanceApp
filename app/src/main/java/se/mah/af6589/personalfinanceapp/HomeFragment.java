@@ -45,8 +45,6 @@ public class HomeFragment extends Fragment {
         Description description = new Description();
         description.setText("");
         pieChart.setDescription(description);
-        pieChart.setEntryLabelColor(Color.BLACK);
-        pieChart.setEntryLabelTextSize(15);
         tvWelcome = (TextView) rootView.findViewById(R.id.tvWelcome);
         tvIncomeSum = (TextView) rootView.findViewById(R.id.tvIncomeSum);
         tvExpenditureSum = (TextView) rootView.findViewById(R.id.tvExpenditureSum);

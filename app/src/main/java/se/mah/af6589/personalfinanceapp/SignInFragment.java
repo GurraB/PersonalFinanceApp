@@ -46,7 +46,7 @@ public class SignInFragment extends Fragment {
     }
 
     public void loginFailed() {
-
+        Toast.makeText(getActivity(), "Wrong username or password", Toast.LENGTH_LONG).show();
     }
 
     public void setText(String contents) {

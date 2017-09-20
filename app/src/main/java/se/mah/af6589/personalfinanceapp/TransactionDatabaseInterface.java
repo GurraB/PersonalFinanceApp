@@ -58,31 +58,6 @@ public class TransactionDatabaseInterface extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public ArrayList<Transaction> getTransactions(User user) {
-        /*ArrayList<Transaction> incomes = new ArrayList<>();
-        incomes.add(new Transaction(1, new Date(0), Transaction.Category.Salary, "Salary", 100, false));
-        incomes.add(new Transaction(1, new Date(0), Transaction.Category.Salary, "Sossebidrag", 50, false));
-        incomes.add(new Transaction(1, new Date(0), Transaction.Category.Other, "Swish", 20, false));
-        incomes.add(new Transaction(1, new Date(0), Transaction.Category.Other, "Stuff", 80, false));
-        return incomes;*/
-
-        ArrayList<Transaction> transactions = new ArrayList<>();
-        try {
-            SQLiteDatabase db = getReadableDatabase();
-            Cursor cursor = db.query(TABLE_NAME, new String[]{COLUMN_ID, COLUMN_DATE, COLUMN_CATEGORY, COLUMN_TITLE, COLUMN_AMOUNT, COLUMN_EXPENDITURE}, COLUMN_USER + "=?", new String[]{user.getUsername()}, null, null, null, null);
-            if (cursor != null) {
-                cursor.moveToFirst();
-                do {
-                    transactions.add(new Transaction(cursor.getInt(0), Date.valueOf(cursor.getString(1)), Transaction.Category.valueOf(cursor.getString(2)), cursor.getString(3), Float.parseFloat(cursor.getString(4)), cursor.getInt(5) == 1));
-                }
-                while (cursor.moveToNext());
-            }
-        } catch (Exception e) {
-            Log.e("DB exception", "getTransactions");
-        }
-        return transactions;
-    }
-
     public ArrayList<Transaction> getIncomes(User user) {
         ArrayList<Transaction> incomes = new ArrayList<>();
         try {

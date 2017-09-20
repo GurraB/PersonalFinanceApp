@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SignUpFragment extends Fragment {
 
@@ -46,6 +47,9 @@ public class SignUpFragment extends Fragment {
     public void registrationFailed() {
         etUsername.setText("");
         etPassword.setText("");
+        etName.setText("");
+        etLastname.setText("");
+        Toast.makeText(getActivity(), "Registration failed", Toast.LENGTH_LONG).show();
     }
 
     private class Listener implements View.OnClickListener {

@@ -73,7 +73,6 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
 
     private void setAnimation(View viewToAnimate, int position)
     {
-        // If the bound view wasn't previously displayed on screen, it's animated
         if (position > lastPosition)
         {
             Animation animation = AnimationUtils.loadAnimation((AppCompatActivity) controller.getActivity(), android.R.anim.slide_in_left);

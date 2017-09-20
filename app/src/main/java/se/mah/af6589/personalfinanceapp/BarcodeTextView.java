@@ -80,7 +80,6 @@ public class BarcodeTextView extends TextView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        //super.onDraw(canvas);
         int width = getMeasuredWidth();
         int height = getMeasuredHeight();
         String code = super.getText().toString();
