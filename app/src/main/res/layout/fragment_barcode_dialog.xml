@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="se.mah.af6589.personalfinanceapp.BarcodeDialogFragment"
+    android:orientation="vertical">
+
+    <se.mah.af6589.personalfinanceapp.BarcodeTextView
+        android:id="@+id/tv_barcode_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textAlignment="center"/>
+
+    <ImageButton
+        android:id="@+id/btn_close_barcode_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:src="@drawable/ic_close"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+</LinearLayout>

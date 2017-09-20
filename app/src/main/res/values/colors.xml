@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#43A047</color>
+    <color name="colorPrimaryDark">#1B5E20</color>
+    <color name="colorAccent">#FFC400</color>
+    <color name="white">#FFF</color>
+    <color name="colorBad">#ff0000</color>
+
+    <array name="chart_colors">
+        <item>#c6ff8c</item>
+        <item>#fff88c</item>
+        <item>#f5d38d</item>
+        <item>#8cebff</item>
+        <item>#ff8e9c</item>
+    </array>
+</resources>
